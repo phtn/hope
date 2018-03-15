@@ -1,15 +1,15 @@
 import React from 'react'
 import Card, { CardContent } from 'material-ui/Card'
 import ExpansionPanel, { 
-  ExpansionPanelDetails,
+  // ExpansionPanelDetails,
   ExpansionPanelSummary,
-  ExpansionPanelActions
+  // ExpansionPanelActions
 } from 'material-ui/ExpansionPanel'
 import ExpandMoreIcon from 'material-ui-icons/ExpandMore'
 const styles = {
   card: {
-    height: 400,
-    backgroundColor: '#eee'
+    height: window.innerHeight * .72,
+    background: 'linear-gradient(to top left, rgba(255,0,0,0), rgba(161,136,127,0.9))'
   }
 }
 
