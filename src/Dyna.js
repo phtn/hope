@@ -48,7 +48,7 @@ const progressBar = {
 const Home = (props) => (
   <DynamicImport load={() => import('./pages/Home')}>
     {(Component) => Component === null
-      ? <LinearProgress/>
+      ? <LinearProgress color='secondary' variant='query'/>
       : <Component {...props} container={layout.facadeStyleOne}/>}
   </DynamicImport>
 )
