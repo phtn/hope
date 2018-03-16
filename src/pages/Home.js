@@ -3,16 +3,12 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card'
 import Typography from 'material-ui/Typography'
 import Pool from '../assets/pool3.jpg'
 
-const styles = {
-  media: {
-    height: 400
-  }
-}
+
 
 const MediaCard = props => (
   <Card >
     <CardMedia
-      style={styles.media}
+      style={props.media}
       image={Pool}
       title="Contemplative Reptile"
     />
@@ -34,7 +30,7 @@ export default props => (
   <div className='animated fadeIn'>
       <Card raised={true} style={props.container}>
         <CardContent>
-          <MediaCard/>
+          <MediaCard media={props.media}/>
          
         </CardContent>
       </Card>

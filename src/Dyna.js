@@ -40,16 +40,13 @@ class DynamicImport extends Component {
   }
 }
 
-const progressBar = {
-  position: 'absolute',
-  bottom: 0
-}
+
 
 const Home = (props) => (
   <DynamicImport load={() => import('./pages/Home')}>
     {(Component) => Component === null
       ? <LinearProgress color='secondary' variant='query'/>
-      : <Component {...props} container={layout.facadeStyleOne}/>}
+      : <Component {...props} container={layout.facadeStyleOne} media={layout.mediaStyle}/>}
   </DynamicImport>
 )
 

@@ -33,6 +33,11 @@ class Layout {
           background: 'linear-gradient(to top left, rgba(255,0,0,0), rgba(114,91,83,0.9))'
         }
       },
+      get mediaStyle(){
+        return {
+          height: this.height * .60,
+        }
+      },
       resizeHeight: action(h=> {
         this.height = h
       }),
