@@ -33,9 +33,21 @@ class Layout {
           background: 'linear-gradient(to top left, rgba(255,0,0,0), rgba(114,91,83,0.9))'
         }
       },
+      mediaHeight: 300,
+      mediaObserver: action(h=> h < 420 ? this.mediaHeight = 200 : this.mediaHeight = 300 ),
       get mediaStyle(){
         return {
-          height: this.height * .60,
+          height: this.mediaHeight,
+          width: '100%'
+        }
+      },
+      
+      get navStyle(){
+        return {
+            backgroundColor: 'transparent',
+            position: 'absolute',
+            bottom: 15,
+            width: '100%'
         }
       },
       resizeHeight: action(h=> {

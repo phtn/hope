@@ -5,15 +5,13 @@ import Diamond from './assets/diamond.png'
 
 const styles = {
   header: {
+    padding: 10,
+  },
+  title: {
     fontFamily: 'IBM Plex, serif',
     fontSize: 18,
     color: 'rgb(114,91,83)',
     textShadow: '1px 1px #ccc',
-    padding: 10,
-    lineHeight: '50px',
-  },
-  title: {
-
   }
 }
 export default props => (
@@ -22,12 +20,10 @@ export default props => (
       <Grid item xs={2}>
         <img src={Logo} alt='' height={50}  />
       </Grid>
-      <Grid item xs={9}>
-        The Clarion Inn & Suites
+      <Grid item xs={8}>
+        <h1 style={styles.title}>The Clarion Inn & Suites</h1>
       </Grid>
-      <Grid item xs={1}>
-      <img src={Diamond} alt='' height={50}  />
-      </Grid>
+      
     </Grid>
   </div>
 )

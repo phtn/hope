@@ -81,13 +81,6 @@ const navStyles = {
 }
 const styles={
 
-  nav:{
-    // margin: 20,
-    backgroundColor: 'transparent',
-    position: 'absolute',
-    bottom: 15,
-    width: '100%'
-  },
   button: {
     color: '#666',
   },
@@ -106,7 +99,8 @@ const Dyna = observer (
      componentDidMount(){
        window.addEventListener('resize', ()=> {
           layout.resizeHeight(window.innerHeight)
-          console.log(window.innerHeight)
+          layout.mediaObserver(window.innerHeight)
+          // console.log(window.innerHeight)
         })
      }
      componentWillUnmount(){
@@ -135,7 +129,7 @@ const Dyna = observer (
            <Route path='/bar' component={Bar}/>
          </div>
           <BottomNavigation
-           style={styles.nav}
+           style={layout.navStyle}
          >
            <NavLink activeStyle={navStyles} style={styles.link} to='/'>
              <BottomNavigationAction label="Home" icon={<Icon src={HomeIcon}/> } />
