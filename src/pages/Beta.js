@@ -10,7 +10,7 @@ const styles = {
 
 export default props => (
   <div className='animated fadeIn'>
-    <Card raised={true} style={styles.card}>
+    <Card raised={true} style={props.container}>
       <CardContent>Beta</CardContent>
     </Card>
   </div>
