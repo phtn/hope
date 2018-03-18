@@ -12,6 +12,8 @@ import Shows from '../assets/shows.jpg'
 
 const imageArr = [Pool, Shows]
 
+
+
 const settings = {
   dots: false,
   infinite: false,
@@ -25,25 +27,23 @@ const settings = {
 
 const MediaCard = props => (
   <Card >
+    
     <CardMedia
       style={props.media}
-      image={Pool}
+      image={props.image}
       title="Contemplative Reptile"
     />
-    <CardContent>
-     
-    </CardContent>
-    <CardActions>
-     
-    </CardActions>
+    
   </Card>
 )
 
 const HomeSlides = props => (
   <Slider {...settings}>
-    
-    <div><MediaCard media={props.media}/></div>
-    <div>Test 2</div>
+    {imageArr.map(i=> (
+      <div key={i.toString()}>
+        <MediaCard media={props.media} styles={props.media} image={i}/>
+      </div>
+    ))}
   </Slider>
 )
 
@@ -51,7 +51,6 @@ export default props => (
   <div className='animated fadeIn'>
       <Card raised={true} style={props.container}>
         <CardContent>
-          
           <HomeSlides {...props}/>
         </CardContent>
       </Card>

@@ -35,7 +35,7 @@ class Layout {
         }
       },
       mediaHeight: 300,
-      mediaObserver: action(h=> h < 420 ? this.mediaHeight = 200 : this.mediaHeight = 300 ),
+      mediaObserver: action(h=> h < 420 ? this.mediaHeight = 200 : this.mediaHeight = 400 ),
       get mediaStyle(){
         return {
           height: this.mediaHeight,
