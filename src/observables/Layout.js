@@ -18,7 +18,8 @@ class Layout {
       get facadeStyleOne(){
         return {
           height: this.height-82,
-          background: 'linear-gradient(to top left, rgba(255,0,0,0), rgba(211,184,174,0.9))'
+          background: 'linear-gradient(to top left, rgba(255,0,0,0), rgba(51,51,51,0.9))',
+          padding: 0
         }
       },
       get facadeStyleTwo(){
@@ -38,7 +39,8 @@ class Layout {
       get mediaStyle(){
         return {
           height: this.mediaHeight,
-          width: '100%'
+          width: '100%',
+          margin: 0
         }
       },
       

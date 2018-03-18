@@ -82,7 +82,7 @@ const navStyles = {
 const styles={
 
   button: {
-    color: '#666',
+    color: 'tomato',
   },
   link: {textDecoration: 'none',},
   page: {

@@ -8,12 +8,15 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import Pool from '../assets/pool3.jpg'
+import Shows from '../assets/shows.jpg'
+
+const imageArr = [Pool, Shows]
 
 const settings = {
   dots: false,
   infinite: false,
   speed: 700,
-  arrows: false,
+  arrows: true,
   autoplay: true,
   autoplaySpeed: 5000,
   fade: true,
@@ -38,6 +41,7 @@ const MediaCard = props => (
 
 const HomeSlides = props => (
   <Slider {...settings}>
+    
     <div><MediaCard media={props.media}/></div>
     <div>Test 2</div>
   </Slider>
